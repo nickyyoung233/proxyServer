@@ -1,13 +1,5 @@
 const express = require("express");
 const app = express();
-// const fetch = require("node-fetch");
-const cors = require("cors");
-
-app.use(
-  cors({
-    origin: "127.0.0.1:5500",
-  })
-);
 
 app.get("/", async (req, res) => {
   const response = await fetch(
