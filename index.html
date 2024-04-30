@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script>
+  function requestServer(port) {
+    console.log('click---', port);
+    // const testAddress = 'https://api.juejin.cn/growth_api/v1/lottery_config/get?aid=6587&uuid=7280803055729214987'
+    // const res = fetch(testAddress).then(res => res.json()).then(data => console.log(data)).catch(err => console.log(err))
+    const res = fetch(`http://localhost:${port}`).then(res => res.json()).then(data => console.log(data)).catch(err => console.log(err))
+
+
+  }
+</script>
+
+<body>
+  <div>
+    <p></p>
+    <button onclick="requestServer(3000)">No Proxy in 3000 port</button>
+  </div>
+  <div>
+    <p></p>
+    <button onclick="requestServer(3500)">have Proxy in 3500 port</button>
+  </div>
+</body>
+
+</html>
